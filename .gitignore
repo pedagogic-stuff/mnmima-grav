@@ -1,2 +1,5 @@
 /.DS_Store
 /.github
+/htdocs/cache/
+/htdocs/user/
+.DS_Store
