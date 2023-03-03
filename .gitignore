@@ -7,3 +7,6 @@
 /htdocs/user/config
 /htdocs/logs
 .DS_Store
+/htdocs/logs/grav.log
+/htdocs/tmp
+/htdocs/user/pages/02.typography/default.md
