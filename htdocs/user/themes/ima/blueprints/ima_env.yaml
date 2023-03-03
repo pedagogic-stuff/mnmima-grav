@@ -1,4 +1,3 @@
 title: IMA Environnement
-@extends:
+extends:
     type: default
-    context: blueprints://pages
