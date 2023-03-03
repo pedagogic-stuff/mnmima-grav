@@ -1,3 +1,76 @@
 title: IMA Environnement
-extends:
-    type: default
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+
+            header.header:
+              type: editor
+              label: Page introduction
+              ordering@: 2
+              size: medium
+
+            content:
+              type: editor
+              label: Contenu 
+
+            header.news_options_title:
+              type: spacer
+              title: News Options
+
+            header.news_link:
+              type: text
+              label: News Externe Link (opt.)
+              size: medium
+
+            header.news_international:
+              type: checkbox
+              label: Is this an international news ? 
+
+            header.event_options_title:
+              type: spacer
+              title: Event Options
+
+            header.event_date:
+              type: date
+              label: Event Date
+              size: medium
+
+            header.event_place:
+              type: text
+              label: Event Place
+              size: medium
+
+            header.event_link:
+              type: text
+              label: Event Externe Link (opt.)
+
+            modular_title:
+              type: spacer
+              title: PLUGIN_ADMIN.MODULE_SETUP
+
+            header.content.items:
+              type: text
+              label: PLUGIN_ADMIN.ITEMS
+              default: '@self.modular'
+              size: medium
+
+            header.content.order.by:
+              type: text
+              label: PLUGIN_ADMIN.ORDER_BY
+              placeholder: date
+              help:
+              size: small
+
+            header.content.order.dir:
+              type: text
+              label: PLUGIN_ADMIN.ORDER
+              help: '"desc" or "asc" are valid values'
+              placeholder: desc
+              size: small
+
