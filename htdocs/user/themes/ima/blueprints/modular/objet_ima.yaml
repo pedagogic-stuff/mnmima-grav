@@ -1,0 +1,29 @@
+title: Objet IMA
+"extends@": default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.media_order:
+              label: Fichier de l'animation Objet
+
+            header.news_options_title:
+              type: spacer
+              title: Détails de l'objet
+
+            header.coordination:
+              type: text
+              label: Coordonnées de la zone CSS
+              default: 22, 34, 25, 76...
+              size: medium
+
+            header.country:
+              type: text
+              label: Pays de l'objet
+              size: medium
+
+

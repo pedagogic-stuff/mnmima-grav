@@ -1,3 +1,4 @@
+title: Page d'accueil
 extends@: default
 
 form:
@@ -10,6 +11,22 @@ form:
             content:
               type: editor
               label: Contenu 
+
+            popin.spacer:
+              type: spacer
+              title: Détails Popin accueil
+
+            header.popin_content:
+              type: markdown
+              label: Contenu texte de la Popin
+
+            header.popin_btnlabel:
+              type: text
+              label: Label du bouton
+
+            header.popin_btnaction:
+              type: text
+              label: Action du bouton
 
             modular_title:
               type: spacer

@@ -1,0 +1,11 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<div class="sg-default-layout">
+		<div class="row">
+			{{ page.header.popin_content|markdown }}
+			<button>{{ page.header.popin_btnlabel }}</button>
+			{{ page.header.popin_btnaction }}
+		</div>
+	</div>
+{% endblock %}
