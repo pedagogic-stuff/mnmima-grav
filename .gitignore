@@ -1,5 +1,9 @@
 /.DS_Store
 /.github
 /htdocs/cache/
-/htdocs/user/
+/htdocs/user/pages
+/htdocs/user/data
+/htdocs/user/accounts
+/htdocs/user/config
+/htdocs/logs
 .DS_Store
