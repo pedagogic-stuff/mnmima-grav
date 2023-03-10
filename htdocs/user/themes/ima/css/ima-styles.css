@@ -235,9 +235,12 @@ button {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
-  filter: blur(10px) ;
 }
 
+.blurred {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
 
 /* 
  * POPINS
@@ -270,7 +273,3 @@ button {
       left: calc(calc( 100% - 500px) / 2);
     }
 
-    .blurred
-      filter: blur(8px);
-      -webkit-filter: blur(8px);
-    }

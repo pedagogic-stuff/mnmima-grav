@@ -8,6 +8,8 @@
         <div id="{{ _self.pageLinkName(module.menu) }}" class="popin">
 
         	{{ module.content|markdown }}
+        	
+            <p>Media animation : <img src="{{ module.media|first.url }}"></p>
 
 			<p>Pays : {{ module.header.country|raw }}</p>
 			<p>Coordonnées : {{ module.header.coordination|raw }}</p>
