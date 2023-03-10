@@ -3,6 +3,7 @@ console.log('hello');
 
 function init() {
 
+    const bg_img = document.querySelector('.bg-img');
     const popins = document.querySelectorAll('.popin');
     const objects = document.querySelectorAll('.object');
 
@@ -20,6 +21,7 @@ function init() {
             console.log(object_pop);
 
             object_pop.classList.remove('hidden');
+            bg_img.classList.add('blurred');
 
         })
 
@@ -30,6 +32,7 @@ function init() {
     for (const btn of close_btn) {
         btn.addEventListener('click', () => {
             btn.closest('.popin').classList.add('hidden');
+            bg_img.classList.remove('blurred');
         })
 
 
