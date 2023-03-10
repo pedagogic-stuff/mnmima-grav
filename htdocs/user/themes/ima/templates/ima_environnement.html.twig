@@ -1,0 +1,24 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {{ page.content|markdown }}
+
+    {% for module in page.collection() %}
+        <div id="{{ _self.pageLinkName(module.menu) }}" {% if module.header.title|contains('In Page Navigation') or module.header.title|contains('Showcase') %}{% else %}data-magellan-target="{{ _self.pageLinkName(module.menu) }}{% endif %}">
+
+        	{{ module.content|raw }}
+
+			<p>Pays : {{ module.header.country|raw }}</p>
+			<p>Coordonnées : {{ module.header.coordination|raw }}</p>
+			<p>Type : {{ module.header.type|raw }}</p>
+			<p>Date : {{ module.header.period|raw }}</p>
+			<p>Technique : {{ module.header.technique|raw }}</p>
+			<p>Taille : {{ module.header.size|raw }}</p>
+			<p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
+			<p>Crédits : {{ module.header.credits|raw }}</p>
+			<p>Localisation dans le musée : {{ module.header.localization|raw }}</p>
+
+        </div>
+    {% endfor %}
+{% endblock %}

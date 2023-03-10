@@ -1,0 +1,16 @@
+title: IMA Environnement
+label: IMA Envrionnement
+extends@: default
+
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            news_options_title:
+              type: spacer
+              title: News Options
+

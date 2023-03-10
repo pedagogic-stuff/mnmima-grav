@@ -8,9 +8,6 @@ form:
         content:
           fields:
 
-            header.media_order:
-              label: Fichier de l'animation Objet
-
             header.news_options_title:
               type: spacer
               title: Détails de l'objet
@@ -26,4 +23,40 @@ form:
               label: Pays de l'objet
               size: medium
 
+            header.type:
+              type: text
+              label: Type d'objet / Nom
+              size: medium
 
+            header.period:
+              type: text
+              label: Date de l'objet
+              size: medium
+
+            header.technique:
+              type: text
+              label: Matériel / Technique de l'objet
+              size: medium
+
+            header.size:
+              type: text
+              label: Taille de l'objet
+              size: medium
+
+            header.inventory:
+              type: text
+              label: Numéro d'inventaire
+              size: medium
+
+            header.credits:
+              type: text
+              label: Crédits
+              size: medium
+
+            header.localization:
+              type: text
+              label: Localisation Musée
+              size: medium
+
+
+            

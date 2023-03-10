@@ -31,32 +31,14 @@
         <div class="off-canvas-content" data-off-canvas-content>
 
         {% block header %}
-        <header id="header">
 
-        	<div class="row sg-header">
-	            {% set image = pages.find('/logo').media.images|first %}
-                {% if image %}
-                <div id="logo">
-                    <a href="{{ base_url == '' ? '/' : base_url }}">
-                        {{ image.cropResize(96,96).html }}
-                    </a>
-                </div>
-                {% endif %}
-                {% if theme_config.site_title.enabled %}
-	            <div id="sg-header-title">
-	                <a href="{{ base_url == '' ? '/' : base_url }}">
-                        <h3{% if theme_config.google_fonts_logo.enabled %} style="font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"{% endif %}>{{ config.site.title }}</h3>
-                    </a>
-	            </div>
-                {% endif %}
-	            <div id="navigation" class="{% if theme_config.mobilemenu_breakpoint == 'all' %}hide{% else %}show-for-{{ theme_config.mobilemenu_breakpoint }}{% endif %}">
-	                {% block header_extra %}{% endblock %}
-	                {% block header_navigation %}
-	                {% include 'partials/navigation.html.twig' %}
-	                {% endblock %}
-	            </div>
-            </div>
-        </header>
+            <!-- HEADER COMMUN A TOUTES LES PAGES -->
+            <header class="header" style="background-image: url('{{ url('theme://images/ima2.png', true) }}')">
+                <a href="{{ base_url == '' ? '/' : base_url }}" class="button button-left">Accueil</a>
+                <h1>Bienvenue à la maison ! </h1>
+                <button class="button button-right">Crédits</button>
+            </header>
+
         {% endblock %}
 
         {% block body %}
@@ -66,14 +48,15 @@
         {% endblock %}
 
         {% block footer %}
-        {% set content = pages.find('/footer').content %}
-        {% if content %}
-        <footer id="footer">
-            <div class="row sg-center">
-                 {{ content }}
-            </div>
-        </footer>
-        {% endif %}
+
+            <!-- FOOTER COMMUN A TOUTES LES PAGES -->
+            <footer class="footer" style="background-image: url('{{ url('theme://images/ima1.png', true) }}')">
+
+                <a href="/maison" class="button button-bottom-left">LA MAISON</a>
+                <a href="/ville" class="button button-bottom-right">LA VILLE</a>
+
+            </footer>
+
         {% endblock %}
 
         {% block bottom %}
