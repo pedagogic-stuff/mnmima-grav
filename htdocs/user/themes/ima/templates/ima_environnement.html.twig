@@ -14,21 +14,25 @@
     {% for module in page.collection() %}
         <div id="{{ _self.pageLinkName(module.menu) }}" class="popin big fixed hidden"  data-id="{{ module.slug }}">
             <button class="close">x</button>
+            
+            <div class="popin_inner">
 
-        	{{ module.content|markdown }}
-        	
-            <p>Media animation : <img src="{{ module.media|first.url }}"></p>
+                {{ module.content|markdown }}
+                
+                <p>Media animation : <img src="{{ module.media|first.url }}"></p>
 
-			<p>Pays : {{ module.header.country|raw }}</p>
-			<p>Coordonnées : {{ module.header.coordination|raw }}</p>
-			<p>Type : {{ module.header.type|raw }}</p>
-			<p>Date : {{ module.header.period|raw }}</p>
-			<p>Technique : {{ module.header.technique|raw }}</p>
-			<p>Taille : {{ module.header.size|raw }}</p>
-			<p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
-			<p>Crédits : {{ module.header.credits|raw }}</p>
-			<p>Localisation dans le musée : {{ module.header.localization|raw }}</p>
+                <p>Pays : {{ module.header.country|raw }}</p>
+                <p>Coordonnées : {{ module.header.coordination|raw }}</p>
+                <p>Type : {{ module.header.type|raw }}</p>
+                <p>Date : {{ module.header.period|raw }}</p>
+                <p>Technique : {{ module.header.technique|raw }}</p>
+                <p>Taille : {{ module.header.size|raw }}</p>
+                <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
+                <p>Crédits : {{ module.header.credits|raw }}</p>
+                <p>Localisation dans le musée : {{ module.header.localization|raw }}</p>
+            </div>
 
+            
         </div>
     {% endfor %}
 {% endblock %}

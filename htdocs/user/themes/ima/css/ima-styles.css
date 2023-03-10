@@ -247,6 +247,7 @@ button {
  */
 
     .popin {
+      position: relative;
       width: 50%;
       max-width: 600px;
       max-height: 600px;
@@ -255,7 +256,7 @@ button {
       border-color: black;
       text-align: center;
       font-size: 1.5rem;
-      padding: 20px;
+      padding: 40px;
 
       /* Centrer horizontalement et verticalement le contenu de la popin */
       display: flex;
@@ -286,5 +287,16 @@ button {
 
     .popin.hidden {
       display: none;
+    }
+    .popin .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .popin_inner {
+      height: 100%;
+      width: 100%;
+      overflow: scroll;
     }
 
