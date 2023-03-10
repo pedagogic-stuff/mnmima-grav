@@ -2,12 +2,12 @@
 
 {% block content %}
 
-    {{ page.content|markdown }}
+	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" >
 
     {% for module in page.collection() %}
-        <div id="{{ _self.pageLinkName(module.menu) }}" {% if module.header.title|contains('In Page Navigation') or module.header.title|contains('Showcase') %}{% else %}data-magellan-target="{{ _self.pageLinkName(module.menu) }}{% endif %}">
+        <div id="{{ _self.pageLinkName(module.menu) }}" class="popin">
 
-        	{{ module.content|raw }}
+        	{{ module.content|markdown }}
 
 			<p>Pays : {{ module.header.country|raw }}</p>
 			<p>Coordonnées : {{ module.header.coordination|raw }}</p>
