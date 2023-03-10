@@ -2,10 +2,18 @@
 
 {% block content %}
 
-	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" >
+	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" usemap="#zonescliquables" width="4032" height="3024" name="" >
+
+
+    <map name="zonescliquables">
+        {% for module in page.collection() %}
+            <area shape="poly" coords="3,200,1414,1161,1406,1752,5,2116,3,200" href="#" id="object-{{ module.slug }}" class="object" data-id="{{ module.slug }}" />
+        {% endfor %}
+    </map>
 
     {% for module in page.collection() %}
-        <div id="{{ _self.pageLinkName(module.menu) }}" class="popin">
+        <div id="{{ _self.pageLinkName(module.menu) }}" class="popin big fixed hidden"  data-id="{{ module.slug }}">
+            <button class="close">x</button>
 
         	{{ module.content|markdown }}
         	

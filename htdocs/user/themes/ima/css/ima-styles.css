@@ -249,6 +249,7 @@ button {
     .popin {
       width: 50%;
       max-width: 600px;
+      max-height: 600px;
       background: white;
       border-radius: 30px;
       border-color: black;
@@ -266,10 +267,24 @@ button {
 
     }
 
+    .popin.big {
+      width: 90vw;
+      height: 80vh;
+      max-width: none;
+      max-height: none;
+    }
+    .popin.big.fixed {
+      top: calc( 20vh / 2);
+      left: calc( 10vw / 2);
+    }
     .popin.fixed {
       position: fixed;
       z-index: 9999;
-      top: 40%;
-      left: calc(calc( 100% - 500px) / 2);
+      top: calc(calc( 100vh - 600px) / 2);
+      left: calc(calc( 100vw - 600px) / 2);
+    }
+
+    .popin.hidden {
+      display: none;
     }
 

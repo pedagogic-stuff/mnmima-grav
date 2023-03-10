@@ -14,7 +14,11 @@
     {% block stylesheets %}
         {% do assets.addCss('theme://css/ima-styles.css',102) %}
     {% endblock %}
-    
+	
+	{% block javascripts %}
+        {% do assets.addJs('theme://js/script.js', {group:'bottom'}) %}
+	{% endblock %}
+
     {% block assets deferred %}
         {{ assets.css()|raw }}
         {{ assets.js()|raw }}
@@ -60,15 +64,10 @@
         {% endblock %}
 
         {% block bottom %}
-            {% block javascripts %}
-                {% if page.header.wow_js == "disabled" %}
-                {% elseif page.header.wow_js == "enabled" or theme_config.wow_js.enabled %}
-                    {% do assets.addJs('theme://js/wow.js',{'priority':101, 'group':'bottom'}) %}
-                    {% do assets.addInlineJs('var wow = new WOW();wow.init();',{'priority':99, 'pipeline':false, 'group':'bottom'}) %}
-                {% endif %}
 
-            {% endblock %}
-            {{ assets.js('bottom') }}
+			{{ assets.js('bottom')|raw }}
+
+
         {% endblock %}
         </div>
     </div>
