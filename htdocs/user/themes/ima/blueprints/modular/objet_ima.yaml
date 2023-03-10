@@ -15,7 +15,7 @@ form:
             header.coordination:
               type: text
               label: Coordonnées de la zone CSS
-              default: 22, 34, 25, 76...
+              default: 3,200,1414,1161,1406,1752,5,2116,3,200
               size: medium
 
             header.country:

@@ -7,7 +7,7 @@
 
     <map name="zonescliquables">
         {% for module in page.collection() %}
-            <area shape="poly" coords="3,200,1414,1161,1406,1752,5,2116,3,200" href="#" id="object-{{ module.slug }}" class="object" data-id="{{ module.slug }}" />
+            <area shape="poly" coords="{{ module.header.coordination }}" href="#" id="object-{{ module.slug }}" class="object" data-id="{{ module.slug }}" />
         {% endfor %}
     </map>
 
