@@ -250,11 +250,11 @@ button {
       width: 50%;
       max-width: 600px;
       background: white;
-      border: 1.5px solid;
-      border-radius: 15px;
+      border-radius: 30px;
       border-color: black;
       text-align: center;
       font-size: 1.5rem;
+      padding: 20px;
 
       /* Centrer horizontalement et verticalement le contenu de la popin */
       display: flex;
