@@ -1,11 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div class="sg-default-layout">
-		<div class="row">
-			{{ page.header.popin_content|markdown }}
-			<button>{{ page.header.popin_btnlabel }}</button>
-			{{ page.header.popin_btnaction }}
-		</div>
+
+	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" >
+
+	<div class="popin fixed">
+		{{ page.header.popin_content|markdown }}
+		<a href="{{ page.header.popin_btnaction }}" class="button">{{ page.header.popin_btnlabel }}</a>
+		
 	</div>
+
+
 {% endblock %}
+
