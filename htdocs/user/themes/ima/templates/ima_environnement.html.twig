@@ -16,22 +16,36 @@
             <button class="close">x</button>
             
             <div class="popin_inner">
-
-                {{ module.content|markdown }}
                 
-                <p>Media animation : <img src="{{ module.media|first.url }}"></p>
+                <h3 class="cartel_title">Emplacement : {{ module.header.localization|raw }}</h3>
 
-                <p>Pays : {{ module.header.country|raw }}</p>
-                <p>Coordonnées : {{ module.header.coordination|raw }}</p>
-                <p>Type : {{ module.header.type|raw }}</p>
-                <p>Date : {{ module.header.period|raw }}</p>
-                <p>Technique : {{ module.header.technique|raw }}</p>
-                <p>Taille : {{ module.header.size|raw }}</p>
-                <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
-                <p>Crédits : {{ module.header.credits|raw }}</p>
-                <p>Localisation dans le musée : {{ module.header.localization|raw }}</p>
+                <div class="cartel_content">
+
+
+                    <div class="cartel_animation">
+                        <img src="{{ module.media|first.url }}">
+                        <p>Crédits : {{ module.header.credits|raw }}</p>
+                    </div><!-- femeture balise .cartel_animation -->
+
+                    <div class="cartel_text">
+                        <p>{{ module.header.country|raw }}</p>
+                        <p>{{ page.title }}</p>
+
+                        <p>Date : {{ module.header.period|raw }}</p>
+                        <p>Technique : {{ module.header.technique|raw }}</p>
+                        <p>Taille : {{ module.header.size|raw }}</p>
+                        <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
+                        <p>Type : {{ module.header.type|raw }}</p>
+
+                        <div class="cartel_long">
+                            {{ module.content|markdown }}
+                        </div>
+
+                    </div><!-- femeture balise .cartel_text -->            
+
+                </div>
+
             </div>
-
 
         </div>
     {% endfor %}

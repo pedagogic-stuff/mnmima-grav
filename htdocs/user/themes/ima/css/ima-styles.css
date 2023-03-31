@@ -312,3 +312,42 @@ button {
       overflow: scroll;
     }
 
+
+
+    /* 
+     * CARTELS
+     */
+
+    .popin.cartel {
+      max-width: none;
+      width: 90vw;
+      height: calc(100vh - 200px);
+      top: 100px;
+      bottom: 100px;
+      left: 5vw;
+      right: 5vw;
+  
+    }
+
+    .cartel_content {
+      display: flex;
+      padding-left: 15px ;
+      padding-right: 15px;
+   
+      
+    }
+    .cartel_text{
+      font-size : 15px;
+      height: 45%;
+      width: 45%;
+    }
+
+    .cartel_title {
+      font-size : 20px;  
+      text-align : left;
+       padding-left: 45px;
+    }
+    .cartel_animation{
+      width: 55%;
+      height: 45%;
+    }

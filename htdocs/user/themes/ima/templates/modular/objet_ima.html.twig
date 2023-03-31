@@ -3,17 +3,7 @@
 {% set column_num = page.header.column_number %}
 
 
-<div class="modular-row{% if css %} {{ css }}{% endif %}">
-  <div class="row">
-    <div class="sg-content">
 
-      <h2 class="sg-title">{{ page.title }}</h2>
 
-      <div class="sg-columns-row">
-
-            {{ page.content|markdown }}
-
-      </div>
-    </div>
-  </div>
-</div>
+    {{ page.content|markdown }}
+ 
