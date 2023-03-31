@@ -38,9 +38,9 @@
 
             <!-- HEADER COMMUN A TOUTES LES PAGES -->
             <header class="header" style="background-image: url('{{ url('theme://images/ima2.png', true) }}')">
-                <a href="{{ base_url == '' ? '/' : base_url }}" class="button button-left">Accueil</a>
-                <h1>Bienvenue à la maison ! </h1>
-                <button class="button button-right">Crédits</button>
+                <a href="{{ base_url == '' ? '/' : base_url }}" class="button white">Accueil</a>
+                <h1 class="site_title">Bienvenue à la maison ! </h1>
+                <a href="#" class="button white">Crédits</a>
             </header>
 
         {% endblock %}
@@ -56,8 +56,8 @@
             <!-- FOOTER COMMUN A TOUTES LES PAGES -->
             <footer class="footer" style="background-image: url('{{ url('theme://images/ima1.png', true) }}')">
 
-                <a href="/maison" class="button button-bottom-left">LA MAISON</a>
-                <a href="/ville" class="button button-bottom-right">LA VILLE</a>
+                <a href="/maison" class="button white">La maison</a>
+                <a href="/ville" class="button white ">La ville</a>
 
             </footer>
 
