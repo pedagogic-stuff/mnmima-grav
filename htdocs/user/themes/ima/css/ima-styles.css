@@ -143,6 +143,7 @@ button {
     }
 
     .site_title {
+      font-size: 34px;
       text-align: center;
       color: white;
       text-transform: uppercase;
@@ -162,6 +163,9 @@ button {
       background-size:cover;
       z-index: 9999;
     }
+      .footer .button {
+        margin: 10px 40px;
+      }
 
 
 /* 
@@ -281,14 +285,14 @@ button {
     }
 
     .popin.big {
-      width: 90vw;
+      width: 95vw;
       height: 80vh;
       max-width: none;
       max-height: none;
     }
     .popin.big.fixed {
       top: calc( 20vh / 2);
-      left: calc( 10vw / 2);
+      left: calc( 5vw / 2);
     }
     .popin.fixed {
       position: fixed;
@@ -296,7 +300,6 @@ button {
       top: calc(calc( 100vh - 600px) / 2);
       left: calc(calc( 100vw - 600px) / 2);
     }
-
     .popin.hidden {
       display: none;
     }
@@ -305,7 +308,6 @@ button {
       right: 20px;
       top: 20px;
     }
-
     .popin_inner {
       height: 100%;
       width: 100%;
@@ -340,6 +342,7 @@ button {
       font-size : 15px;
       height: 45%;
       width: 45%;
+      text-align: left;
     }
 
     .cartel_title {
@@ -349,5 +352,11 @@ button {
     }
     .cartel_animation{
       width: 55%;
-      height: 45%;
+    }
+    .cartel_animation img {
+      max-height:60vh;
+    }
+    .cartel_caption {
+      font-size: 15px;
+      font-style: italic;
     }
