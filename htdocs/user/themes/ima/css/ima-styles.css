@@ -165,6 +165,7 @@ button {
     }
       .footer .button {
         margin: 10px 40px;
+        min-width: 200px;
       }
 
 
@@ -180,8 +181,8 @@ button {
       color: #383838;
       text-align: center;
       font-size: 28px;
-      padding-right: 16px;
-      padding-left: 16px;
+      padding-right: 26px;
+      padding-left: 26px;
       padding-bottom: 8px;
       padding-top: 11px;
       cursor: pointer;
@@ -213,24 +214,25 @@ button {
       box-shadow: 05px 05px 05px rgba(0, 0, 0, 0.2);
     }
 
-    .white {
+    .button.white {
       border-color: white;
       color: white;
       background: none;
     }
-    .white:hover, 
-    .white.active {
+    .button.white:hover, 
+    .button.white.active {
       background-color: white;
       color: var(--color-blue);
     }
 
     .button:hover {
-      background-color: rgba(255, 255, 255, 0.8);
+      color: white;
+      background-color: var(--color-blue);
+      border-color: var(--color-blue);
     }
 
-    .active {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
+
+
 .container-button {
   justify-content: center;
 }
