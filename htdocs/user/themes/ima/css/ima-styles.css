@@ -193,21 +193,26 @@ button {
     }
 
     .close {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       background-color: white;
       border-radius: 50%;
       border: 1px solid #737373;
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       color: #383838;
-      text-align: center;
       font-size: 25px;
-      line-height: 30px;
-      padding: 1px;
       cursor: pointer;
       transition: all 0.5s;
       margin: 5px;
-      
+      font-weight: 100;
+    }
+    .close:active, 
+    .close:focus {
+      border-color: var(--color-blue);
+      color: var(--color-blue)
     }
 
     .shadow {
