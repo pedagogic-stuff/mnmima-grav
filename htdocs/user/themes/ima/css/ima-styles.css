@@ -262,6 +262,19 @@ button {
  * POPINS
  */
 
+ .popin_outer {
+  position: fixed;
+  left: 2vw;
+  right: 2vw;
+  top: 100px;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+  .popin_outer.hidden {
+    display: none;
+  }
     .popin {
       position: relative;
       width: 50%;
@@ -273,6 +286,7 @@ button {
       text-align: center;
       font-size: 1.5rem;
       padding: 40px;
+      z-index: -1;
 
       /* Centrer horizontalement et verticalement le contenu de la popin */
       display: flex;
@@ -290,19 +304,10 @@ button {
       max-width: none;
       max-height: none;
     }
-    .popin.big.fixed {
-      top: calc( 20vh / 2);
-      left: calc( 5vw / 2);
-    }
     .popin.fixed {
-      position: fixed;
       z-index: 9999;
-      top: calc(calc( 100vh - 600px) / 2);
-      left: calc(calc( 100vw - 600px) / 2);
     }
-    .popin.hidden {
-      display: none;
-    }
+
     .popin .close {
       position: absolute;
       right: 20px;

@@ -12,41 +12,45 @@
     </map>
 
     {% for module in page.collection() %}
-        <div id="{{ _self.pageLinkName(module.menu) }}" class="popin big fixed hidden"  data-id="{{ module.slug }}">
-            <button class="close">x</button>
-            
-            <div class="popin_inner">
+        <div id="{{ _self.pageLinkName(module.menu) }}" class="popin_outer hidden" data-id="{{ module.slug }}">
+
+            <div class="popin big">
+                <button class="close">x</button>
                 
-                <h3 class="cartel_title">Emplacement : {{ module.header.localization|raw }}</h3>
+                <div class="popin_inner">
+                    
+                    <h3 class="cartel_title">Emplacement : {{ module.header.localization|raw }}</h3>
 
-                <div class="cartel_content">
+                    <div class="cartel_content">
 
 
-                    <div class="cartel_animation">
-                        <img src="{{ module.media|first.url }}">
-                        <p class="cartel_caption">Crédits : {{ module.header.credits|raw }}</p>
-                    </div><!-- femeture balise .cartel_animation -->
+                        <div class="cartel_animation">
+                            <img src="{{ module.media|first.url }}">
+                            <p class="cartel_caption">Crédits : {{ module.header.credits|raw }}</p>
+                        </div><!-- femeture balise .cartel_animation -->
 
-                    <div class="cartel_text">
-                        <p>{{ module.header.country|raw }}</p>
-                        <p>{{ page.title }}</p>
+                        <div class="cartel_text">
+                            <p>{{ module.header.country|raw }}</p>
+                            <p>{{ page.title }}</p>
 
-                        <p>Date : {{ module.header.period|raw }}</p>
-                        <p>Technique : {{ module.header.technique|raw }}</p>
-                        <p>Taille : {{ module.header.size|raw }}</p>
-                        <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
-                        <p>Type : {{ module.header.type|raw }}</p>
+                            <p>Date : {{ module.header.period|raw }}</p>
+                            <p>Technique : {{ module.header.technique|raw }}</p>
+                            <p>Taille : {{ module.header.size|raw }}</p>
+                            <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
+                            <p>Type : {{ module.header.type|raw }}</p>
 
-                        <div class="cartel_long">
-                            {{ module.content|raw }}
-                        </div>
+                            <div class="cartel_long">
+                                {{ module.content|raw }}
+                            </div>
 
-                    </div><!-- femeture balise .cartel_text -->            
+                        </div><!-- femeture balise .cartel_text -->            
+
+                    </div>
 
                 </div>
 
             </div>
-
         </div>
+
     {% endfor %}
 {% endblock %}

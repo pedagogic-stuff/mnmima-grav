@@ -4,10 +4,11 @@
 
 	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" >
 
-	<div class="popin fixed">
-		{{ page.header.popin_content|markdown }}
-		<a href="{{ page.header.popin_btnaction }}" class="button">{{ page.header.popin_btnlabel }}</a>
-		
+	<div class="popin_outer">
+		<div class="popin">
+			{{ page.header.popin_content|markdown }}
+			<a href="{{ page.header.popin_btnaction }}" class="button">{{ page.header.popin_btnlabel }}</a>
+		</div>
 	</div>
 
 
