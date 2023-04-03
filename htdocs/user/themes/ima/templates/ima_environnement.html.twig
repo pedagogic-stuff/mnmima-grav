@@ -19,7 +19,7 @@
                 
                 <div class="popin_inner">
                     
-                    <h3 class="cartel_title">Emplacement : {{ module.header.localization|raw }}</h3>
+                    <h3 class="cartel_title"><strong>Emplacement :</strong> {{ module.header.localization|raw }}</h3>
 
                     <div class="cartel_content">
 
@@ -30,14 +30,23 @@
                         </div><!-- femeture balise .cartel_animation -->
 
                         <div class="cartel_text">
-                            <p>{{ module.header.country|raw }}</p>
-                            <p>{{ page.title }}</p>
+                            <div class="cartel_text_top">
+                                <div>
+                                    <img src="{{ url('theme://images/icon_water.png', true) }}" alt="icon water">
+                                </div>
+                                <div>
+                                    <p></strong>{{ module.header.country|raw }}</strong></p>
+                                    <h4 class="cartel_name">{{ page.title }}</h4>
+                                </div>
+                            </div>
 
-                            <p>Date : {{ module.header.period|raw }}</p>
-                            <p>Technique : {{ module.header.technique|raw }}</p>
-                            <p>Taille : {{ module.header.size|raw }}</p>
-                            <p>Numéro d'inventaire : {{ module.header.inventory|raw }}</p>
-                            <p>Type : {{ module.header.type|raw }}</p>
+                            <div class="cartel_technique">
+                                <p><strong>Date :</strong> {{ module.header.period|raw }}</p>
+                                <p><strong>Technique :</strong> {{ module.header.technique|raw }}</p>
+                                <p><strong>Taille :</strong> {{ module.header.size|raw }}</p>
+                                <p><strong>Numéro d'inventaire :</strong> {{ module.header.inventory|raw }}</p>
+                                <p>Type : {{ module.header.type|raw }}</p>
+                            </div>
 
                             <div class="cartel_long">
                                 {{ module.content|raw }}

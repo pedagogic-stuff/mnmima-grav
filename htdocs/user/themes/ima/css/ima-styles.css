@@ -342,8 +342,7 @@ button {
       display: flex;
       padding-left: 15px ;
       padding-right: 15px;
-   
-      
+      gap: 60px;
     }
     .cartel_text{
       font-size : 15px;
@@ -356,6 +355,8 @@ button {
       font-size : 20px;  
       text-align : left;
        padding-left: 45px;
+       font-weight: 100;
+       font-size: 2.2rem;
     }
     .cartel_animation{
       width: 55%;
@@ -367,3 +368,29 @@ button {
       font-size: 15px;
       font-style: italic;
     }
+    .cartel_text_top { 
+      display: flex;
+      margin-bottom: 4rem;
+      align-items: center;
+      gap: 20px;
+      font-size: 1.6rem;
+    }
+    .cartel_text_top p {
+      margin: 0;
+    }
+    .cartel_name {
+      font-size: 2rem;
+      margin: 0;
+    }
+    .cartel_technique {
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+    }
+    .cartel_technique p {
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    .cartel_long {
+      font-size: 1.4rem;
+    }
+
