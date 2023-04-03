@@ -318,7 +318,6 @@ button {
     .popin_inner {
       height: 100%;
       width: 100%;
-      overflow: scroll;
     }
 
 
@@ -351,6 +350,7 @@ button {
       height: 100%;
       width: 45%;
       text-align: left;
+      overflow-y: scroll;
     }
 
     .cartel_title {
