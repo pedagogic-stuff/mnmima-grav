@@ -56,8 +56,8 @@
             <!-- FOOTER COMMUN A TOUTES LES PAGES -->
             <footer class="footer" style="background-image: url('{{ url('theme://images/ima1.png', true) }}')">
 
-                <a href="/maison" class="button white {% if uri.path == '/maison' %} active {% endif %}">La maison</a>
-                <a href="/ville" class="button white {% if uri.path == '/ville' %} active {% endif %}">La ville</a>
+                <a href="{{ base_url }}/maison" class="button white {% if uri.path == '/maison' %} active {% endif %}">La maison</a>
+                <a href="{{ base_url }}/ville" class="button white {% if uri.path == '/ville' %} active {% endif %}">La ville</a>
 
             </footer>
 
