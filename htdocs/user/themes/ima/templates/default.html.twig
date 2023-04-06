@@ -4,6 +4,13 @@
 
 	<img class="bg-img blurred" src="{{ url(page.media|first.url) }}" >
 
-	{{ page.content }}
+	<div class="popin_outer ">
+		<div class="popin big">
+			<h1>{{ page.title|markdown }}</h1>
+			<div>{{ page.content|markdown }}</div>
+		</div>
+	</div>
+
 
 {% endblock %}
+

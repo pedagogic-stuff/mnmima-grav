@@ -8,7 +8,7 @@
     <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
     {% include 'partials/metadata.html.twig' %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
     
     {% block stylesheets %}
@@ -37,10 +37,10 @@
         {% block header %}
 
             <!-- HEADER COMMUN A TOUTES LES PAGES -->
-            <header class="header" style="background-image: url('{{ url('theme://images/ima2.png', true) }}')">
+            <header class="header" style="background-image: url('{{ url('theme://images/ima2.png') }}')">
                 <a href="{{ base_url == '' ? '/' : base_url }}" class="button white">Accueil</a>
                 <h1 class="site_title">Bienvenue à la maison</h1>
-                <a href="https://mnm-imadesignsystem.thom4s1.repl.co/credits.html" class="button white">Crédits</a>
+                <a href="{{ base_url }}/credits" class="button white">Crédits</a>
             </header>
 
         {% endblock %}
@@ -54,10 +54,16 @@
         {% block footer %}
 
             <!-- FOOTER COMMUN A TOUTES LES PAGES -->
-            <footer class="footer" style="background-image: url('{{ url('theme://images/ima1.png', true) }}')">
+            <footer class="footer" style="background-image: url('{{ url('theme://images/ima1.png') }}')">
 
-                <a href="{{ base_url }}/maison" class="button white {% if uri.path == '/maison' %} active {% endif %}">La maison</a>
-                <a href="{{ base_url }}/ville" class="button white {% if uri.path == '/ville' %} active {% endif %}">La ville</a>
+                {% set options = { items: {'@page.children': '/environnements'}, 'limit': 5 } %}
+                {% set my_collection = page.collection(options) %}
+
+                {% for p in my_collection %}
+                    {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+
+                    <a href="{{ p.url }}" class="button white {{ active_page }}">{{ p.title|e }}</a>
+                {% endfor %}
 
             </footer>
 
