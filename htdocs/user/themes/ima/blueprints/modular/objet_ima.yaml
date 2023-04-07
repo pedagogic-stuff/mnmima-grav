@@ -28,6 +28,11 @@ form:
               label: Type d'objet / Nom
               size: medium
 
+            header.elementIcon:
+              type: file
+              label: Element de l'objet / Nom
+              size: medium
+
             header.period:
               type: text
               label: Date de l'objet

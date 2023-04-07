@@ -31,11 +31,13 @@
 
                         <div class="cartel_text">
                             <div class="cartel_text_top">
-                                <div>
-                                    <img src="{{ url('theme://images/icon_water.png', true) }}" alt="icon water">
+                                <div><pre>
+                                    {{ dump(module.header.elementIcon) }}
+                                </pre>
+                                    <img src="{{ url(module.header.elementIcon|first.path) }}">
                                 </div>
                                 <div>
-                                    <p></strong>{{ module.header.country|raw }}</strong></p>
+                                    <p><strong>{{ module.header.country|raw }}</strong></p>
                                     <h4 class="cartel_name">{{ page.title }}</h4>
                                 </div>
                             </div>
