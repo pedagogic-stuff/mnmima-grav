@@ -148,7 +148,7 @@ button {
       text-align: center;
       color: white;
       text-transform: uppercase;
-      font-weight: 100;
+      font-weight: 400;
     }
 
 
@@ -311,8 +311,8 @@ button {
     }
 
     .popin.big {
-      width: 95vw;
-      height: 80vh;
+      width: 90vw;
+      height: 75vh;
       max-width: none;
       max-height: none;
     }
@@ -351,7 +351,7 @@ button {
       display: flex;
       align-items: flex-start;
       gap: 60px;
-      height: 60vh;
+      height: 55vh;
     }
     .cartel_text{
       font-size : 15px;
@@ -371,13 +371,14 @@ button {
     .cartel_title {
       text-align : left;
        font-weight: 100;
-       font-size: 2.2rem;
+       font-size: 24px;
     }
     .cartel_animation{
       width: 55%;
     }
     .cartel_animation img {
-      max-height:60vh;
+      max-height: 50vh;
+      display: inline-block;
     }
     .cartel_caption {
       font-size: 15px;
