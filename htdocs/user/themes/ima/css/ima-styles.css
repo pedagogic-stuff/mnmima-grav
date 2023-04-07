@@ -363,7 +363,7 @@ button {
       padding-bottom: 50px;
     }
     .cartel_icon {
-      max-width: 85px;
+      width: 125px;
       display: flex;
       align-items: center;
     }
