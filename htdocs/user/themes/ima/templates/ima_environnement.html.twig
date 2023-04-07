@@ -47,8 +47,13 @@
                             <div class="cartel_technique">
                                 <p><strong>Date :</strong> {{ module.header.period|raw }}</p>
                                 <p><strong>Technique :</strong> {{ module.header.technique|raw }}</p>
-                                <p><strong>Taille :</strong> {{ module.header.size|raw }}</p>
-                                <p><strong>Numéro d'inventaire :</strong> {{ module.header.inventory|raw }}</p>
+                                {% if module.header.size != '' %}
+                                    <p><strong>Taille :</strong> {{ module.header.size|raw }}</p>
+                                {% endif %}
+                                {% if module.header.inventory != '' %}
+                                    <p><strong>Numéro d'inventaire :</strong> {{ module.header.inventory|raw }}</p>
+                                {% endif %}
+                                
                             </div>
 
                             <div class="cartel_long">
