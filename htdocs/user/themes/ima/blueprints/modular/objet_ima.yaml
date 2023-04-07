@@ -65,5 +65,10 @@ form:
               label: Localisation Musée
               size: medium
 
+            header.vimeoId:
+              type: text
+              label: Identifiant de la vidéo d'animation sous Vimeo
+              size: medium
+
 
             
