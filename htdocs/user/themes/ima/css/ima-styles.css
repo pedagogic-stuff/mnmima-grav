@@ -353,7 +353,7 @@ button {
     .cartel_content {
       display: flex;
       align-items: flex-start;
-      gap: 60px;
+      gap: 40px;
       height: 55vh;
     }
     .cartel_text{
@@ -378,6 +378,10 @@ button {
     }
     .cartel_animation{
       width: 55%;
+    }
+    .cartel_animation iframe {
+      max-width: 100%;
+      
     }
     .cartel_animation img {
       max-height: 50vh;

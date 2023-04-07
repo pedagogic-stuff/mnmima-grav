@@ -21,11 +21,14 @@
                     
                     <h3 class="cartel_title"><strong>Emplacement :</strong> {{ module.header.localization|raw }}</h3>
 
+
                     <div class="cartel_content">
 
-
                         <div class="cartel_animation">
-                            <img src="{{ module.media|first.url }}">
+                            {# <img src="{{ module.media|first.url }}"> #}
+
+                            <iframe src="https://player.vimeo.com/video/{{ module.header.vimeoId|raw }}?h=a54c253012" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
                             <p class="cartel_caption">Crédits : {{ module.header.credits|raw }}</p>
                         </div><!-- femeture balise .cartel_animation -->
 
