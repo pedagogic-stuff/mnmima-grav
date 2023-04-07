@@ -31,9 +31,7 @@
 
                         <div class="cartel_text">
                             <div class="cartel_text_top">
-                                <div><pre>
-                                    {{ dump(module.header.elementIcon) }}
-                                </pre>
+                                <div class="cartel_icon">
                                     <img src="{{ url(module.header.elementIcon|first.path) }}">
                                 </div>
                                 <div>
@@ -47,6 +45,7 @@
                                 <p><strong>Technique :</strong> {{ module.header.technique|raw }}</p>
                                 <p><strong>Taille :</strong> {{ module.header.size|raw }}</p>
                                 <p><strong>Numéro d'inventaire :</strong> {{ module.header.inventory|raw }}</p>
+                                <p>Type : {{ module.header.type|raw }}</p>
                             </div>
 
                             <div class="cartel_long">

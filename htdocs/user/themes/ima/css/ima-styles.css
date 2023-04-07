@@ -362,6 +362,11 @@ button {
       padding-right: 40px;
       padding-bottom: 50px;
     }
+    .cartel_icon {
+      max-width: 85px;
+      display: flex;
+      align-items: center;
+    }
 
     .cartel_title {
       text-align : left;

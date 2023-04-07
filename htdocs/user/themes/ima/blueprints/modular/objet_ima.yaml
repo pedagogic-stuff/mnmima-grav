@@ -31,6 +31,8 @@ form:
             header.elementIcon:
               type: file
               label: Element de l'objet / Nom
+              destination: "theme://files/"
+              multiple: false
               size: medium
 
             header.period:
