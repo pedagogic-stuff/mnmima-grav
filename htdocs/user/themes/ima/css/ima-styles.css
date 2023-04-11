@@ -160,6 +160,7 @@ button {
       height: 8vh;
       display: flex;
       justify-content: center;
+      align-items: center;
       background-image: url("ima1.png");
       background-repeat:no-repeat;
       background-size:cover;
