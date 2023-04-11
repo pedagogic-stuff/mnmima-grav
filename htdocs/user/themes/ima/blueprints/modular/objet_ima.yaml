@@ -70,5 +70,9 @@ form:
               label: Identifiant de la vidéo d'animation sous Vimeo
               size: medium
 
+            header.vimeoHash:
+              type: text
+              label: Hash parameter
+              size: medium
 
             
