@@ -17,6 +17,7 @@
 	
 	{% block javascripts %}
         {% do assets.addJs('theme://js/script.js', {group:'bottom'}) %}
+        {% do assets.addJs('https://player.vimeo.com/api/player.js', {group:'bottom'}) %}
 	{% endblock %}
 
     {% block assets deferred %}

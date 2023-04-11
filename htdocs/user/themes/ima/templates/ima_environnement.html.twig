@@ -3,19 +3,25 @@
 {% block content %}
 
 	<img class="bg-img" src="{{ url(page.media|first.url) }}" usemap="#zonescliquables" width="4032" height="3024" name="" >
+  
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
+    {% set i = 1 %}
 
     <map name="zonescliquables">
         {% for module in page.collection() %}
-            <area shape="poly" coords="{{ module.header.coordination }}" href="#" id="object-{{ module.slug }}" class="object" data-id="{{ module.slug }}" />
+            <area shape="poly" coords="{{ module.header.coordination }}" href="#" id="object-{{ module.slug }}" class="object" data-id="{{ module.slug }}" data-i="{{i}}" />
+            {% set i = i + 1 %}
         {% endfor %}
     </map>
+
+    {% set i = 1 %}
 
     {% for module in page.collection() %}
         <div id="{{ _self.pageLinkName(module.menu) }}" class="popin_outer hidden" data-id="{{ module.slug }}">
 
             <div class="popin big">
-                <button class="close" style="background-image: url('{{ url('theme://images/close.png') }}')"></button>
+                <button id="close_{{i}}" class="close" style="background-image: url('{{ url('theme://images/close.png') }}')"></button>
                 
                 <div class="popin_inner">
                     
@@ -27,8 +33,25 @@
                         <div class="cartel_animation">
                             {# <img src="{{ module.media|first.url }}"> #}
 
-                            <iframe src="https://player.vimeo.com/video/{{ module.header.vimeoId|raw }}?h=5563c5ab3f&autoplay=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <iframe id="iframe_{{i}}" src="https://player.vimeo.com/video/{{ module.header.vimeoId|raw }}?h=5563c5ab3f&loop=1&title=0&controls=0&sidedock=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
+                            <script>
+                                const cartel_btn_{{i}} = document.querySelector('[data-i="{{i}}"]');
+                                const iframe_{{i}} = document.querySelector('#iframe_{{i}}');
+                                const player_{{i}} = new Vimeo.Player(iframe_{{i}});
+                                const close_{{i}} = document.querySelector('#close_{{i}}');
+
+                                cartel_btn_{{i}}.addEventListener('click', function() {
+                                    player_{{i}}.play();
+                                });
+                                
+                                close_{{i}}.addEventListener('click', function() {
+                                    player_{{i}}.pause();
+                                });
+
+                            </script>
+
+                            {% set i = i + 1 %}
 
                             <p class="cartel_caption">Crédits : {{ module.header.credits|raw }}</p>
                         </div><!-- femeture balise .cartel_animation -->
