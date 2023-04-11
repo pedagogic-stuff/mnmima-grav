@@ -339,10 +339,27 @@ button {
       height: 75vh;
       max-width: none;
       max-height: none;
-      padding: 200px;
+      padding: 50px 100px;
       overflow-y: scroll;
+      text-align: left;
+      font-size: 16px;
     }
-
+    .popin.credits h1 {
+      margin: 0;
+    }
+    .popin.credits h2 {
+      color: black;
+      font-size: 20px;
+      margin: 40px 0 20px 0;
+      font-weight: 900;
+    }
+    .popin.credits h1 p {
+      margin: 0;
+    }
+    .popin.credits p {
+      margin: 0 0 10px 0;
+      line-height: 1.6;
+    }
 
     /* 
      * CARTELS
