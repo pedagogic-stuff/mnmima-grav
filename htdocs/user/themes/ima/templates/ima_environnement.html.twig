@@ -34,8 +34,6 @@
                             {# <img src="{{ module.media|first.url }}"> #}
                             <iframe id="iframe_{{i}}" src="https://player.vimeo.com/video/{{ module.header.vimeoId|raw }}?h={{ module.header.vimeoHash|raw }}&loop=1&title=0&controls=0&sidedock=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/816495341?h=c8174e0c86" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
-
                             <script>
                                 const cartel_btn_{{i}} = document.querySelector('[data-i="{{i}}"]');
                                 const iframe_{{i}} = document.querySelector('#iframe_{{i}}');
