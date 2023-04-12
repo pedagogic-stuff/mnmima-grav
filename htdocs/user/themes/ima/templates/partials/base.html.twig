@@ -41,7 +41,9 @@
             <header class="header" style="background-image: url('{{ url('theme://images/ima2.png') }}')">
                 <a href="{{ base_url == '' ? '/' : base_url }}" class="button white">Accueil</a>
                 <h1 class="site_title">Ville arabe, ville durable</h1>
-                <a href="{{ base_url }}/credits" class="button white">Crédits</a>
+
+                {% set active_credits = (page.active or page.activeChild) ? 'active' : '' %}
+                <a href="{{ base_url }}/credits" class="button white {{ active_credits }}">Crédits</a>
             </header>
 
         {% endblock %}
