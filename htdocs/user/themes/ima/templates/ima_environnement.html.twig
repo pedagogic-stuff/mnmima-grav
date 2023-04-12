@@ -41,6 +41,7 @@
                                 const close_{{i}} = document.querySelector('#close_{{i}}');
 
                                 cartel_btn_{{i}}.addEventListener('click', function() {
+                                    player_{{i}}.setVolume(0)
                                     player_{{i}}.play();
                                 });
                                 
