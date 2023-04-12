@@ -1,5 +1,5 @@
 
-console.log('hello');
+console.log('hello IMA');
 
 function init() {
 
@@ -8,20 +8,13 @@ function init() {
     const objects = document.querySelectorAll('.object');
 
     for (const el of objects) {
-        console.log(el);
 
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             const id = el.getAttribute('data-id');
-            console.log(id);
-
             const pop_id = '.popin_outer[data-id="' + id + '"]';
-            console.log(pop_id);
-
             const object_pop = document.querySelector( pop_id );
-            console.log(object_pop);
-
             object_pop.classList.remove('hidden');
             bg_img.classList.add('blurred');
 
