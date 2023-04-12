@@ -10,7 +10,9 @@ function init() {
     for (const el of objects) {
         console.log(el);
 
-        el.addEventListener('click', () => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            
             const id = el.getAttribute('data-id');
             console.log(id);
 
